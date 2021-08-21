@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: k8s-python-framework
+spec:
+  successfulJobsHistoryLimit: 10
+  failedJobsHistoryLimit: 10
+  schedule: 0/2 * * * *
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 10
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccount: k8s-python-framework
+          containers:
+            - name: k8s-python-framework
+              image: k8s-python-framework
+          restartPolicy: OnFailure

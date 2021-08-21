@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: k8s-python-framework
+subjects:
+  - kind: ServiceAccount
+    name: k8s-python-framework
+roleRef:
+  kind: ClusterRole
+  name: k8s-python-framework
+  apiGroup: rbac.authorization.k8s.io
