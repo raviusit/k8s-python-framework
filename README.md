@@ -5,10 +5,10 @@
 
 ***Following tools are used to onboard the framework in formal way with high speed development.***
 
- ***Kind***
+ ***- Kind***
  
- ***Skaffold***
+ ***- Skaffold***
  
- ***Kustomize***
+ ***- Kustomize***
  
  
